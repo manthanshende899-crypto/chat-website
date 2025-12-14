@@ -1,0 +1,61 @@
+# chat-website
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Chat Website</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #f1f1f1;
+    }
+    .chat-box {
+      width: 90%;
+      max-width: 400px;
+      margin: 50px auto;
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      background: green;
+      color: white;
+      border: none;
+    }
+    .reply {
+      margin-top: 15px;
+      background: #e0e0e0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="chat-box">
+  <h2>My Chat Website</h2>
+
+  <input id="msg" placeholder="Type your message">
+  <button onclick="reply()">Send</button>
+
+  <div id="answer" class="reply"></div>
+</div>
+
+<script>
+  function reply() {
+    let text = document.getElementById("msg").value;
+    document.getElementById("answer").innerHTML =
+      "You said: " + text;
+  }
+</script>
+
+</body>
+</html>
